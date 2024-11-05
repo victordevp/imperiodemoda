@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos los Productos - Imperio de la Moda</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            margin-top: 80px;
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            background-color: #224b73 !important;
+        }
+        .product-card {
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .product-image {
+            height: 300px;
+            object-fit: cover;
+        }
+        footer {
+            margin-top: 50px;
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+        h1 {
+            margin-bottom: 40px;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">IMPERIO DE LA MODA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./carrito.php">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/shopping-cart.png" alt="Carrito" style="width: 24px;">
+                            <span class="cart-counter" id="cart-counter">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección de todos los productos -->
+    <div class="container">
+        <h1 class="text-center">Todos los Productos</h1>
+        <div class="row">
+            <!-- Producto 1 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/bolsolv.webp" class="card-img-top product-image" alt="Bolso Louis Vuitton">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolso Louis Vuitton</h5>
+                        <p class="card-text">$30,000 MX</p>
+                        <a href="./productos/producto1.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 2 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/L.jpg" class="card-img-top product-image" alt="Bolso Gucci">
+                    <div class="card-body">
+                        <h5 class="card-title">Chamarra de lana</h5>
+                        <p class="card-text">$20,000</p>
+                        <a href="./productos/producto2.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 3 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/nalenciagasnk.webp" class="card-img-top product-image" alt="Sneakers Balenciaga">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneakers Balenciaga</h5>
+                        <p class="card-text">$80,000 MX</p>
+                        <a href="./productos/producto3.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 4 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/boss.webp" class="card-img-top product-image" alt="Polo Hugo Boss">
+                    <div class="card-body">
+                        <h5 class="card-title">Polo Hugo Boss</h5>
+                        <p class="card-text">$12,000 MX</p>
+                        <a href="./productos/producto4.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 5 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/CasaBlanca.jpeg" class="card-img-top product-image" alt="Camisa Versace">
+                    <div class="card-body">
+                        <h5 class="card-title">Playera Casa Blanca Studios</h5>
+                        <p class="card-text">$500</p>
+                        <a href="./productos/producto5.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Producto 6 -->
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/gallery.jpeg" class="card-img-top product-image" alt="Zapatos Christian Dior">
+                    <div class="card-body">
+                        <h5 class="card-title">Playera Gallery Studios</h5>
+                        <p class="card-text">$1,100</p>
+                        <a href="./productos/producto6.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <p>&copy; 2024 Imperio de la Moda. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

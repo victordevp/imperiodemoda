@@ -1,0 +1,107 @@
+/* Estilos generales */
+body {
+    padding-top: 56px;
+    background-color: #f0f0f0; /* Fondo gris claro */
+    color: #333333; /* Texto oscuro */
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    background-color: #2c3e50; /* Fondo de la Navbar azul oscuro */
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #dcdcdc;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #3498db; /* Azul para la sección de bienvenida */
+    color: #ffffff;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.btn-dark {
+    background-color: #2c3e50;
+    border-color: #2c3e50;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+.btn-dark:hover {
+    background-color: #1f2f3b;
+}
+
+.categories, .featured-products {
+    margin-top: 40px;
+    padding-bottom: 40px;
+}
+
+.categories h2, .featured-products h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #34495e;
+    text-align: center;
+}
+
+.product-card {
+    margin-bottom: 20px;
+    border: 1px solid #dcdcdc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Asegurar que todas las imágenes tengan el mismo tamaño */
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; /* Mantiene el aspecto de la imagen ajustándola */
+}
+
+.card-body {
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    border-color: #3498db;
+    width: 100%;
+    padding: 10px;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    border-color: #2980b9;
+}
+
+/* Espaciado adicional entre secciones */
+.container {
+    margin-top: 60px;
+}
+
+/* Footer */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}

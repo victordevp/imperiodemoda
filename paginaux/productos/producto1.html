@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Producto</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <style>
+        .product-page {
+            margin-top: 80px;
+        }
+        .product-image {
+            width: 100%;
+            height: auto;
+        }
+        .product-details {
+            padding: 20px;
+        }
+        .navbar {
+            background-color: #224b73 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">IMPERIO DE LA MODA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../carrito.php">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/shopping-cart.png" alt="Carrito" style="width: 24px;">
+                            <span class="cart-counter" id="cart-counter"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <br>
+    
+    <div class="container">
+        <div id="alert-container"></div> <!-- Contenedor para las alertas -->
+    </div>
+
+    <!-- Página del producto -->
+    <div class="container product-page">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="../assets/images/bolsolv.webp" alt="Product Image" class="product-image">
+            </div>
+            <div class="col-md-6 product-details">
+                <h1>Bolso Louis Vuitton</h1>
+                <h4>$20,000 MX</h4>
+                <p>Descripción del producto. Este es un producto de alta calidad, fabricado con los mejores materiales.</p>
+                
+                <!-- Formulario para agregar el producto -->
+                <form action="../agregar_producto.php" method="POST">
+                    <input type="hidden" name="nombre" value="Bolso Louis Vuitton">
+                    <input type="hidden" name="precio" value="20000">
+                    <input type="hidden" name="descripcion" value="Descripción del producto. Este es un producto de alta calidad, fabricado con los mejores materiales.">
+                    <input type="hidden" name="imagen" value="../assets/images/bolsolv.webp">
+                    <button class="btn btn-primary" name="btnAccion" value="Agregar" type="submit">Agregar al carrito</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Mostrar la alerta de éxito o error basado en la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const message = urlParams.get('message');
+        const alertContainer = document.getElementById('alert-container');
+    
+        if (message) {
+            const alertType = message === 'success' ? 'alert-success' : 'alert-danger';
+            const alertMessage = message === 'success' ? 'El producto ha sido agregado correctamente.' : 'Hubo un error al agregar el producto.';
+            
+            alertContainer.innerHTML = `
+                <div class="alert ${alertType}">
+                    ${alertMessage}
+                    <a href="../carrito.php" class="badge badge-success">Ver Carrito</a>
+                </div>
+            `;
+        }
+    </script>
+    
+</body>
+</html>

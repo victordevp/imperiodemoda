@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa - Imperio de la Moda</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin-top: 80px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .navbar {
+            background-color: #224b73 !important;
+        }
+
+        .welcome-section {
+            text-align: center;
+            padding: 60px 15px;
+            background: linear-gradient(to right, #213e7a, #2575fc);
+            color: white;
+            border-radius: 10px;
+            margin: 20px auto; 
+            max-width: 800px; 
+        }
+
+        .welcome-section h1 {
+            font-size: 3rem;
+        }
+
+        .categories, .featured-products {
+            margin: 30px auto; 
+            max-width: 1200px; 
+        }
+
+        .product-card {
+            transition: transform 0.3s;
+            margin-bottom: 30px; 
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .btn-dark {
+            background: linear-gradient(to right, #213e7a, #2575fc);
+            border: none;
+        }
+
+        .btn-dark:hover {
+            background: linear-gradient(to right,#2575fc, #213e7a);
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./assets/images/LOGO.jpg">IMPERIO DE LA MODA</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./carrito.php">
+                            <img src="https://img.icons8.com/ios-filled/50/ffffff/shopping-cart.png" alt="Carrito" style="width: 24px;">
+                            <span class="cart-counter" id="cart-counter">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+ 
+    <div class="container welcome-section">
+        <h1>Imperio De La Moda</h1>
+        <p>Esta es una tienda dedicada a las personas que desean estar a la moda sin importar el precio</p>
+        <a class="btn btn-dark" href="./productos.html">Ver Productos</a>
+    </div>
+
+
+    <div class="container categories">
+        <h2 class="text-center">Categorías</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/LV.jpg" class="card-img-top product-image" alt="Hombre">
+                    <div class="card-body">
+                        <h5 class="card-title">Hombre</h5>
+                        <a href="./categorias/hombre.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/bolso.jpg" class="card-img-top product-image" alt="Mujer">
+                    <div class="card-body">
+                        <h5 class="card-title">Mujer</h5>
+                        <a href="./categorias/mujer.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/TRAINNER.jpg" class="card-img-top product-image" alt="Sneakers">
+                    <div class="card-body">
+                        <h5 class="card-title">Sneakers</h5>
+                        <a href="./categorias/sneakers.html" class="btn btn-primary">Ver Más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container featured-products">
+        <h2 class="text-center">Nuevos Productos</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/gucci.jpeg" class="card-img-top product-image" alt="Polo Gucci">
+                    <div class="card-body">
+                        <h5 class="card-title">Polo Hugo Boss</h5>
+                        <a href="./productos/producto4.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/L.jpg" class="card-img-top product-image" alt="Chamarra de lana">
+                    <div class="card-body">
+                        <h5 class="card-title">Chamarra de lana</h5>
+                        <a href="./productos/producto2.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="./assets/images/bolsolv.webp" class="card-img-top product-image" alt="Bolso Louis Vuitton">
+                    <div class="card-body">
+                        <h5 class="card-title">Bolso Louis Vuitton</h5>
+                        <a href="./productos/producto1.html" class="btn btn-primary">Ver Producto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
